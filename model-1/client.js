@@ -64,11 +64,18 @@ const run = ()=>{
       case 'massive':{
         sendMassive(amount,socket);
         break;
-      }       
+      }
       case 'big':{
         sendBig(amount,socket);        
         break;
       }
+      case 'timer':{        
+        setInterval(() => {
+          sendMassive(amount,socket);
+        }, 1000);
+        
+        break;
+      }      
     }
 
   } else {    
@@ -95,7 +102,7 @@ try{
     //Run script.
     run();
     console.log('Process finished!');
-    
+
 
   });
 
