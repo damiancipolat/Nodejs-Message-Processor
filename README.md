@@ -33,7 +33,7 @@ $ npm run client
 ```
 
 ## Model 3:
-A model defined, that is ready to scale horizontal. This model use the model II with a load balancer in the front.
+A model defined, that is ready to scale horizontal. This model use the model II with a load balancer in the front, this module have a particular beahaviour, function as an apirest that return a url of one server that is defined in his server list.
 
 **Stress test:**
 Process done with 10k messages.
