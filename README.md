@@ -11,7 +11,7 @@ Examples and techniques of how to create a nodejs message processor through a pe
 [Model I]:https://github.com/damiancipolat/Node-MSG-Processor#model-i
 [Model II]:https://github.com/damiancipolat/Node-MSG-Processor#model-2
 [Model III]:https://github.com/damiancipolat/Node-MSG-Processor#model-3
-[Socket balancer]:https://github.com/damiancipolat/Node-MSG-Processor#model-3
+[Socket balancer]:https://github.com/damiancipolat/Node-MSG-Processor#about-socket-balancer
 
 ## Model I:
 A single process with a server that receive and process the messages.
