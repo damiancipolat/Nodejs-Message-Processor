@@ -43,5 +43,9 @@ Process done with 10k messages.
 **To run:**
 ```js
 ...
-```
+
+# About socket balancer:
+![N|Solid](https://github.com/damiancipolat/Node-MSG-Processor/blob/master/doc/doc-4.png?raw=true)
+
+
 
