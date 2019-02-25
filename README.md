@@ -40,12 +40,14 @@ Process done with 10k messages.
 
 ![N|Solid](https://github.com/damiancipolat/Node-MSG-Processor/blob/master/doc/doc-3.png?raw=true)
 
-**To run:**
-```js
-...
 
-# About socket balancer:
+### About socket balancer:
+
 ![N|Solid](https://github.com/damiancipolat/Node-MSG-Processor/blob/master/doc/doc-4.png?raw=true)
 
+**To run:**
+```js
+aaaaa
+...
 
 
