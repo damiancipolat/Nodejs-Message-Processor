@@ -59,7 +59,14 @@ Process done with 10k messages.
 
 **To run:**
 ```js
-aaaaa
+#To start client
+$ npm run client
+
+#To start server
+$ npm run server
+
+#To start balancer
+$ npm run balancer
 ...
 
 
