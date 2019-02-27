@@ -81,7 +81,10 @@ $ npm run balancer
 $ npm run client
 
 #To start server
-$ npm run server
+$ pm2 start process.json
+
+#To monit the running process.
+$ pm2 monit
 
 #To start nginx load balancer
 $ npm run balancer
