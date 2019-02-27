@@ -53,7 +53,7 @@ Process done with 10k messages.
 ![N|Solid](https://github.com/damiancipolat/Node-MSG-Processor/blob/master/doc/doc-3.png?raw=true)
 
 
-### About socket balancer:
+### Using custom socket balancer:
 
 ![N|Solid](https://github.com/damiancipolat/Node-MSG-Processor/blob/master/doc/doc-4.png?raw=true)
 
@@ -67,6 +67,20 @@ $ npm run server
 
 #To start balancer
 $ npm run balancer
-...
+```
 
+### Using NGINX as socket balancer:
 
+![N|Solid](https://github.com/damiancipolat/Node-MSG-Processor/blob/master/doc/doc-4.png?raw=true)
+
+**To run:**
+```js
+#To start client
+$ npm run client
+
+#To start server
+$ npm run server
+
+#To start nginx load balancer
+$ npm run balancer
+```
