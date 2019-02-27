@@ -80,6 +80,7 @@ $ npm run balancer
 ```
 
 ### Using NGINX as socket balancer:
+This show how to use NGINX as socket load balancer. In productive environemts, I thinks that use NGINX is the best option instead of use my example of the previouse example, because is a very eficient and confiable product so is a good option to use in every project. 
 
 ![N|Solid](https://github.com/damiancipolat/Node-MSG-Processor/blob/master/doc/doc-5.png?raw=true)
 
