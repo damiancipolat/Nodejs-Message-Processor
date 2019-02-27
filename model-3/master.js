@@ -63,8 +63,14 @@ const createServer = ()=>{
 
   try{
 
+    //Get the port
+    const port = (process.argv.length>=3) ? process.argv[2] : 8000;
+
+    //Show running port.
+    console.log('-> Running in port',port);
+
     //Start server.
-    const server  = io.listen(8000);
+    const server  = io.listen(port);
 
     //Create client map.
     let sequenceNumberByClient = new Map();

@@ -3,7 +3,14 @@ const io     = require("socket.io-client");
 const moment = require('moment');
 
 let socket   = null;
-const url    = "http://localhost:8000";
+const url    = (process.argv.length>=4) ? process.argv[3] : null;
+
+//If there are no param.
+if (!url){
+  console.log('ERROR - port not defined');
+  console.log('Execute: npm run client [port]');
+  process.exit();
+}
 
 //Generate the mock.
 const getMock = ()=>{
@@ -38,13 +45,16 @@ try{
   //Connect to socket io.
   socket = io.connect(url);
 
+  //Output url
+  console.log('Trying to connect...',url);
+
   //Start socket events.
   socket.on('connect', ()=>{
 
     console.log('> Client connected');
 
     //If there are console parameter.
-    if (process.argv.length===3){
+    if (process.argv.length===4){
 
       let amount = process.argv[2];
 
@@ -58,6 +68,11 @@ try{
 
     console.log('Process finished!');
 
+  });
+
+  //When the connection fail.
+  socket.on('connect_failed', ()=>{
+    console.log('(!) Connection Failed, close program');
   });
 
 } catch(err){
