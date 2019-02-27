@@ -81,19 +81,19 @@ $ npm run balancer
 
 ### Using NGINX as socket balancer:
 
-![N|Solid](https://github.com/damiancipolat/Node-MSG-Processor/blob/master/doc/doc-4.png?raw=true)
+![N|Solid](https://github.com/damiancipolat/Node-MSG-Processor/blob/master/doc/doc-5.png?raw=true)
 
 **To run:**
 ```js
+#To start server
+$ sh ./start.sh
+
+#To start nginx
+$ sudo systemctl restart nginx
+
 #To start client
 $ npm run client
 
-#To start server
-$ pm2 start process.json
-
-#To monit the running process.
-$ pm2 monit
-
-#To start nginx load balancer
-$ npm run balancer
+#To view process running
+$ pm2 list
 ```
