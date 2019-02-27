@@ -56,11 +56,11 @@ Process done with 10k messages.
 
 **To run:**
 ```js
-#To start client, define server url and amount of request.
-$ npm run client 100 http://localhost:8080
-
 #To start server in a port.
 $ npm run server 8080
+
+#To start client, define server url and amount of request.
+$ npm run client 100 http://localhost:8080
 ```
 
 ### Using custom socket balancer:
