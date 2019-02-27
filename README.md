@@ -54,6 +54,14 @@ Process done with 10k messages.
 
 ![N|Solid](https://github.com/damiancipolat/Node-MSG-Processor/blob/master/doc/doc-3.png?raw=true)
 
+**To run:**
+```js
+#To start client, define server url and amount of request.
+$ npm run client 100 http://localhost:8080
+
+#To start server in a port.
+$ npm run server 8080
+```
 
 ### Using custom socket balancer:
 
