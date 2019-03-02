@@ -133,4 +133,4 @@ server {
 }
 ```
 ### NGINX as load balancer:
-I get the nginx configuration from: https://socket.io/docs/#using-with-node-http-server
+I get the nginx configuration from: https://socket.io/docs/#using-with-node-http-server.
