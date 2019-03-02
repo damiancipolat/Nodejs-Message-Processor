@@ -101,7 +101,7 @@ stream {
 
 **To run:**
 ```js
-$ cd model-4
+$ cd model-4/basic
 #To start server
 $ pm2 start server.js
 
