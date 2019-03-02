@@ -83,10 +83,25 @@ $ npm run balancer
 
 ![N|Solid](https://github.com/damiancipolat/Node-MSG-Processor/blob/master/doc/doc-5.png?raw=true)
 
+### Basic example: (client / NGINX /  Server) without load balancer.
+This example create a Nodejs socket server listen connections in the port **8081** and set the NGINX in the middle receiving connections in the port 8000 and by pass them to the port 8081, for other hand there are a client process that sent data to nginx. Pleas thake a look at the file nginx.conf
+
+**nginx.conf**
+```js
+...
+stream {
+    server {
+      listen 8000;
+      proxy_pass 127.0.0.1:8081;
+      proxy_protocol on;
+    }
+}
+```
+
 **To run:**
 ```js
 #To start server
-$ sh ./start.sh
+$ pm2 start server.js
 
 #To start nginx
 $ sudo systemctl restart nginx
