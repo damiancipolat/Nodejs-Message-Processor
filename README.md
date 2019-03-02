@@ -117,7 +117,7 @@ $ npm run client
 $ pm2 list
 ```
 
-### Another configuration, could be /etc/nginx/sites-enabled/default
+#### Another configuration, could be /etc/nginx/sites-enabled/default
 ```js
 server {
     listen 80;
@@ -132,3 +132,5 @@ server {
     }
 }
 ```
+### NGINX as load balancer:
+I get the nginx configuration from: https://socket.io/docs/#using-with-node-http-server
