@@ -3,10 +3,10 @@ Examples and techniques of how to create a nodejs message processor through a pe
 
 **Chapter list:**
 
-- **[Model I]**
-- **[Model II]**
-- **[Model III]**
-- **[Model IV]**
+- **[Model I]** simple client / server
+- **[Model II]** client / master-worker server
+- **[Model III]** client / master-worker server + custom socket balancer
+- **[Model IV]** client / master-worker server + NGINX
 
 [Model I]:https://github.com/damiancipolat/Node-MSG-Processor#model-i
 [Model II]:https://github.com/damiancipolat/Node-MSG-Processor#model-2
