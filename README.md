@@ -6,14 +6,12 @@ Examples and techniques of how to create a nodejs message processor through a pe
 - **[Model I]**
 - **[Model II]**
 - **[Model III]**
-- **[Custom socket balancer]**
-- **[NGINX socket balancer]**
+- **[Model IV]**
 
 [Model I]:https://github.com/damiancipolat/Node-MSG-Processor#model-i
 [Model II]:https://github.com/damiancipolat/Node-MSG-Processor#model-2
 [Model III]:https://github.com/damiancipolat/Node-MSG-Processor#model-3
-[Custom socket balancer]:https://github.com/damiancipolat/Node-MSG-Processor#using-custom-socket-balancer
-[NGINX socket balancer]:https://github.com/damiancipolat/Node-MSG-Processor#using-nginx-as-socket-balancer
+[Model IV]:https://github.com/damiancipolat/Node-MSG-Processor#model-4
 
 ## Model I:
 A single process with a server that receive and process the messages.
@@ -56,6 +54,7 @@ Process done with 10k messages.
 
 **To run:**
 ```js
+$ cd model-3
 #To start server in a port.
 $ npm run server 8080
 
@@ -69,6 +68,7 @@ $ npm run client 100 http://localhost:8080
 
 **To run:**
 ```js
+$ cd model-3
 #To start client
 $ npm run client
 
@@ -100,6 +100,7 @@ stream {
 
 **To run:**
 ```js
+$ cd model-4
 #To start server
 $ pm2 start server.js
 
