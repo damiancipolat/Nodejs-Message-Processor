@@ -135,7 +135,7 @@ server {
 ### NGINX as load balancer:
 I get the nginx configuration from: https://socket.io/docs/#using-with-node-http-server.
 
-#### Another configuration, could be /etc/nginx/nginx.conf
+#### Configuration /etc/nginx/nginx.conf
 
 ```js
 http {
