@@ -134,3 +134,32 @@ server {
 ```
 ### NGINX as load balancer:
 I get the nginx configuration from: https://socket.io/docs/#using-with-node-http-server.
+
+#### Another configuration, could be /etc/nginx/nginx.conf
+
+```js
+http {
+    upstream node_sockets {
+        # 4 instances of NodeJS
+        server 127.0.0.1:8081;
+        server 127.0.0.1:8082;
+        server 127.0.0.1:8083;
+    }
+    
+    map $http_upgrade $connection_upgrade {
+        default upgrade;
+        ''      close;
+    }
+ 
+    server {
+        listen 80;
+        server_name my.server.com;
+        location / {
+            proxy_pass http://node_sockets;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection $connection_upgrade;
+        } 
+    }
+}
+```
