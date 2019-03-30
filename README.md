@@ -133,33 +133,34 @@ server {
 }
 ```
 ### NGINX as load balancer:
-I get the nginx configuration from: https://socket.io/docs/#using-with-node-http-server.
+I get the nginx configuration from: 
+
+https://socket.io/docs/#using-with-node-http-server
+
+https://www.digitalocean.com/community/tutorials/how-to-develop-a-node-js-tcp-server-application-using-pm2-and-nginx-on-ubuntu-16-04
 
 #### Configuration /etc/nginx/nginx.conf
+Take care of set "stream" in nginx.conf.
 
 ```js
-http {
-    upstream node_sockets {
-        # 4 instances of NodeJS
-        server 127.0.0.1:8081;
-        server 127.0.0.1:8082;
-        server 127.0.0.1:8083;
+events{
+  
+}
+
+stream {
+
+    # Load balancer configuration
+    upstream exampleApp {
+        # One failed response will take a server out of circulation for 20 seconds.
+        server  127.0.0.1:8081;
+        server  127.0.0.1:8082;
+        server  127.0.0.1:8083;
     }
-    
-    map $http_upgrade $connection_upgrade {
-        default upgrade;
-        ''      close;
-    }
- 
+
     server {
-        listen 80;
-        server_name my.server.com;
-        location / {
-            proxy_pass http://node_sockets;
-            proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection $connection_upgrade;
-        } 
+      listen 8000;
+      proxy_pass exampleApp;
+      proxy_protocol on;
     }
 }
 ```
